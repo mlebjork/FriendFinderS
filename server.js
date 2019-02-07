@@ -20,16 +20,14 @@ var PORT = process.env.PORT || 8081;
 // The code below is pretty standard.
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.get ("/", function(req, res) {
-  res.json(path.join(__dirname, "public/home.html"));
-});
+
 
 // ================================================================================
 // ROUTER
 // The below points our server to a series of "route" files.
 // These routes give our server a "map" of how to respond when users visit or request data from various URLs.
 // ================================================================================
-app.use(express.static('./app/public'))
+// app.use(express.static('./app/public'))
 
 require("./app/routing/apiRoutes")(app);
 require("./app/routing/htmlRoutes")(app);
