@@ -1,0 +1,10 @@
+.modal-body {
+    position:relative; /*This avoids whatever it's absolute inside of it to go off the container */
+    height: 500px;
+} 
+
+#match-img  {
+        width:80%; /*This value will depend on what size you want for your loading image, let's say it's 50px */
+        height: auto;
+        margin-left: 10%; /*This needs to be half of the width */ 
+}
