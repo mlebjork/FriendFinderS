@@ -20,6 +20,9 @@ var PORT = process.env.PORT || 8081;
 // The code below is pretty standard.
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.get ("/", function(req, res) {
+  res.json(path.join(__dirname, "public/home.html"));
+});
 
 // ================================================================================
 // ROUTER
